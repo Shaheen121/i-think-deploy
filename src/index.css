@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #EFF5F5;
+  color: #497174;
+  font-family: 'Source Code Pro', monospace;
+}
+
+
