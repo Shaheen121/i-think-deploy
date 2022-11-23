@@ -23,16 +23,16 @@ const Header = () => {
       {/* Middle Side */}
       <div className='flex items-center space-x-7'>
         <Link to="/">
-          <AiFillHome className='w-7 h-7 text-[#497174] cursor-pointer' />
+          <AiFillHome className='w-7 h-7 text-[#497174] hover:text-[#EB6440] cursor-pointer transition duration-150 ease-out' />
         </Link>
 
-        <AiFillMessage className='w-7 h-7 text-[#497174] cursor-pointer' />
+        <AiFillMessage className='w-7 h-7 text-[#497174] hover:text-[#EB6440] cursor-pointer transition duration-150 ease-out' />
         <Link to="/News">
-          <IoNewspaperSharp className='w-7 h-7 text-[#497174] cursor-pointer' />
+          <IoNewspaperSharp className='w-7 h-7 text-[#497174] hover:text-[#EB6440] cursor-pointer transition duration-150 ease-out' />
         </Link>
 
 
-        <AiFillInfoCircle className='w-7 h-7 text-[#497174] cursor-pointer' />
+        <AiFillInfoCircle className='w-7 h-7 text-[#497174] hover:text-[#EB6440] cursor-pointer transition duration-150 ease-out' />
       </div>
 
       {/* Right Side */}
