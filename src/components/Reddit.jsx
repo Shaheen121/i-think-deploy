@@ -7,11 +7,11 @@ const Reddit = () => {
 
   const options = {
     method: 'GET',
-    url: 'https://reddit34.p.rapidapi.com/getPopularPosts',
-    params: { sort: 'new' },
+    url: 'https://reddit3.p.rapidapi.com/subreddit',
+    params: {url: 'https://www.reddit.com/r/wallstreetbets', filter: 'hot'},
     headers: {
       'X-RapidAPI-Key': 'a66992fbbdmshe32df20d1736fe2p16b644jsnad5e4a53148d',
-      'X-RapidAPI-Host': 'reddit34.p.rapidapi.com'
+      'X-RapidAPI-Host': 'reddit3.p.rapidapi.com'
     }
   };
 
@@ -19,7 +19,7 @@ const Reddit = () => {
 
   useEffect(() => {
     axios.request(options).then(function (response) {
-      setReddit(response.data.data.posts);
+      setReddit(response.data.posts);
     }).catch(function (error) {
       console.error(error);
     });
@@ -37,10 +37,10 @@ const Reddit = () => {
             <h1
               className='w-[38rem] mx-auto text-left text-lg font-bold p-5 pt-2'
             >{item?.title}</h1>
-            <img
-              className='w-[10rem] shrink-0 mx-auto border-spacing-1'
-              src={item?.thumbnail?.url}
-              alt="" />
+            <div className='flex justify-between mx-auto p-4'>
+              <div>{item?.link_flair_text}</div>
+              <p>{item?.subreddit}</p>
+            </div>
 
             <div className='flex justify-evenly m-4 p-4'>
               <h5
@@ -48,7 +48,7 @@ const Reddit = () => {
               >{item?.author}</h5>
               <a 
               className='hover:text-white'
-              href={item?.permalink}>Post Link</a>
+              href={`https://reddit.com${item?.permalink}`}>Post Link</a>
             </div>
           </div>
         ))}
