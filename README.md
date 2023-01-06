@@ -6,10 +6,6 @@
 ## Welcome! 👋
 Thanks for checking out this Application.
 
-## Overview
-Note: Sorry, the application has been stopped due to a large number of API calls, and it will be locked because of the limit exceeded.
-I appreciate your patience and understanding.
-
 ### Links
 
 - Website URL: [Github](https://github.com/Shaheen121/i-think-deploy.git)
